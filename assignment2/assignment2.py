@@ -186,3 +186,4 @@ def write_sorted_list():
 
 write_sorted_list()
         
+# pytest -v -x assignment2-test.py
