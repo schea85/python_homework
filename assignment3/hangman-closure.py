@@ -19,7 +19,7 @@ def make_hangman(secret_word):
         
         return "_" not in display_word
         
-        print(display_word)
+        
         
     return hangman_closure
 

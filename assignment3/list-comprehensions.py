@@ -5,7 +5,7 @@ import csv
 try:
     with open("../csv/employees.csv", "r") as file:
         reader = csv.DictReader(file)
-        names_list= [(col["first_name"], col["last_name"]) for col in reader]
+        names_list= [(col["first_name"] + " " + col["last_name"]) for col in reader]
         print(names_list)
 except Exception as e:
     print(f"Error: {e}")
