@@ -14,7 +14,11 @@ except Exception as e:
 try:
     with open("../csv/employees.csv", "r") as file:
         reader = csv.DictReader(file)
-        names_with_e = [col for col in names_list if "e" in col[0].lower() or "e" in col[1].lower()]
+        names_with_e = [
+            f"{row['first_name']} {row['last_name']}"
+            for row in reader
+            if "e" in row["first_name"].lower() and "e" in row["last_name"].lower()
+            ]
         print(f"Names including e's: {names_with_e}")
 except Exception as e:
     print(f"Error: {e}")
