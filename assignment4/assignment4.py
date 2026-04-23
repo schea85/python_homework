@@ -71,9 +71,8 @@ clean_data['Age'] = pd.to_numeric(clean_data['Age'], errors= "coerce")
 print(clean_data)
 
 # 4d.) Convert salary to numeric:
-clean_data['Salary'] = clean_data['Salary'].replace(["unknown", "n/a"], pd.NA).fillna("NaN")
+clean_data['Salary'] = clean_data['Salary'].replace(['unknown', 'n/a'], np.nan)
 clean_data['Salary'] = pd.to_numeric(clean_data['Salary'], errors="coerce")
-print(clean_data)
 
 # 4e.) Fill missing numeric values:
 clean_data['Age'] = clean_data['Age'].fillna(clean_data['Age'].mean())
@@ -81,7 +80,9 @@ clean_data['Salary'] = clean_data['Salary'].fillna(clean_data['Salary'].median()
 print(clean_data)
 
 # 4f.) Convert Hire Date to datetime:
-clean_data['Hire Date'] = pd.to_datetime(clean_data['Hire Date'], format="mixed", errors="coerce")
+clean_data['Hire Date'] = pd.to_datetime(clean_data['Hire Date'], errors="coerce")
+# fill NaT values 
+clean_data['Hire Date'] = clean_data['Hire Date'].fillna(pd.Timestamp("2020-01-01"))
 print(clean_data)
 
 # 4g.) Strip extra whitespace and standarize:
