@@ -180,9 +180,10 @@ def write_sorted_list():
     with open("./minutes.csv", "w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(minutes1["fields"])
-        writer.writerow(converted_list)
+        writer.writerows(converted_list)
     
     return converted_list
 
 write_sorted_list()
         
+# pytest -v -x assignment2-test.py
