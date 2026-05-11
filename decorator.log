@@ -1,0 +1,196 @@
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+this string would be logged
+none
+none
+function: greeting
+positional parameters: ()
+keyword parameters: {}
+return: {result}
+none
+function: my_func
+positional parameters: (10,)
+keyword parameters: {}
+return: {result}
+none
+function: another_func
+positional parameters: ()
+keyword parameters: {'name': 'Su', 'city': 'DC'}
+return: {result}
+this string would be logged
+none
+none
+function: greeting
+positional parameters: ()
+keyword parameters: {}
+return: {result}
+none
+function: my_func
+positional parameters: (10,)
+keyword parameters: {}
+return: {result}
+none
+function: another_func
+positional parameters: ()
+keyword parameters: {'name': 'Su', 'city': 'DC'}
+return: {result}
+this string would be logged
+this string would be logged
+this string would be logged
+
+            function: greeting
+            positional parameters: ()
+            keyword parameters: {}
+            return: None
+        
+
+            function: my_func
+            positional parameters: (10,)
+            keyword parameters: {}
+            return: True
+        
+
+            function: another_func
+            positional parameters: ()
+            keyword parameters: {'name': 'Su', 'city': 'DC'}
+            return: <function logger_decorator at 0x1030aac40>
+        
+this string would be logged
+this string would be logged
+this string would be logged
+none
+none
+this string would be logged
+none
+
+            function: greeting
+            positional parameters: ()
+            keyword parameters: {}
+            return: None
+        
+
+            function: my_func
+            positional parameters: (10,)
+            keyword parameters: {}
+            return: True
+        
+none
+
+            function: another_func
+            positional parameters: ()
+            keyword parameters: {'name': 'Su', 'city': 'DC'}
+            return: <function logger_decorator at 0x10740ac40>
+        
+this string would be logged
+
+            function: greeting
+            positional parameters: none
+            keyword parameters: none
+            return: None
+        
+this string would be logged
+
+            function: greeting
+            positional parameters: none
+            keyword parameters: none
+            return: None
+        
+this string would be logged
+
+            function: greeting
+            positional parameters: none
+            keyword parameters: none
+            return: None
+        
+
+            function: my_func
+            positional parameters: (10,)
+            keyword parameters: none
+            return: True
+        
+
+            function: another_func
+            positional parameters: none
+            keyword parameters: {'name': 'Su', 'city': 'DC'}
+            return: <function logger_decorator at 0x1053b6c40>
+        
+this string would be logged
+
+            function: return_none
+            positional parameters: none
+            keyword parameters: none
+            return: None
+        
+
+            function: my_func
+            positional parameters: (10,)
+            keyword parameters: none
+            return: True
+        
+
+            function: another_func
+            positional parameters: none
+            keyword parameters: {'name': 'Su', 'city': 'DC'}
+            return: <function logger_decorator at 0x1080bac40>
+        
+
+            function: return_none
+            positional parameters: none
+            keyword parameters: none
+            return: None
+        
+
+            function: my_func
+            positional parameters: (10,)
+            keyword parameters: none
+            return: True
+        
+
+            function: another_func
+            positional parameters: none
+            keyword parameters: {'name': 'Su', 'city': 'DC'}
+            return: <function logger_decorator at 0x105edac40>
+        
+
+        function: return_none
+        positional parameters: none
+        keyword parameters: none
+        return: None
+        
+
+        function: my_func
+        positional parameters: (10,)
+        keyword parameters: none
+        return: True
+        
+
+        function: another_func
+        positional parameters: none
+        keyword parameters: {'name': 'Su', 'city': 'DC'}
+        return: <function logger_decorator at 0x1011c2c40>
+        
+
+        function: greeting
+        positional parameters: none
+        keyword parameters: none
+        return: None
+        
+
+        function: my_func
+        positional parameters: (10,)
+        keyword parameters: none
+        return: True
+        
+
+        function: another_func
+        positional parameters: none
+        keyword parameters: {'name': 'Su', 'city': 'DC'}
+        return: <function logger_decorator at 0x1078aac40>
+        
