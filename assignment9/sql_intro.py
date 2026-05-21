@@ -107,7 +107,7 @@ try:
             print("Magazines table sorted by Name:", row)
         
         # find all magazines for a particular publisher; use JOIN
-        cursor.execute("SELECT publisher_name, magazine_name FROM publishers JOIN magazines ON publishers.publisher_id = magazines.publisher_id")
+        cursor.execute("SELECT publisher_name, magazine_name FROM publishers JOIN magazines ON publishers.publisher_id = magazines.publisher_id WHERE publisher_name = 'Time Inc'")
         result3 = cursor.fetchall()
         for row in result3:
             print("Magazines for particular Publisher:", row)
