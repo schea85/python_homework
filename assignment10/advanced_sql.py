@@ -28,17 +28,17 @@ conn = sqlite3.connect("../db/lesson.db")
 cursor = conn.cursor()
 
 query2 = """
-    SELECT customers.customer_name, AVG(total_price) AS average_total_price
+    SELECT customers.customer_name, AVG(order_totals.total_price) AS average_total_price
     FROM customers
-    JOIN (
+    LEFT JOIN (
         SELECT orders.order_id, orders.customer_id AS customer_id_b, SUM(products.price*line_items.quantity) AS total_price
         FROM orders 
-        LEFT JOIN line_items ON orders.order_id = line_items.order_id 
-        LEFT JOIN products ON line_items.product_id = products.product_id
+        JOIN line_items ON orders.order_id = line_items.order_id 
+        JOIN products ON line_items.product_id = products.product_id
         GROUP BY orders.order_id
     ) AS order_totals
     ON customers.customer_id = order_totals.customer_id_b
-    GROUP BY customers.customer_name
+    GROUP BY customers.customer_id
 """
 
 cursor.execute(query2)
@@ -122,7 +122,7 @@ conn = sqlite3.connect("../db/lesson.db")
 cursor = conn.cursor()
 
 task_4_query = """
-    SELECT employees.first_name, employees.last_name, employees.employee_id, COUNT(orders.order_id) AS total_quantity
+    SELECT  employees.employee_id, employees.first_name, employees.last_name, COUNT(orders.order_id) AS total_quantity
     FROM employees
     JOIN orders ON employees.employee_id = orders.employee_id
     GROUP BY employees.employee_id
