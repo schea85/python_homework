@@ -11,7 +11,8 @@ query = """
     FROM orders 
     JOIN line_items ON orders.order_id = line_items.order_id 
     JOIN products ON line_items.product_id = products.product_id 
-    GROUP BY orders.order_id 
+    GROUP BY orders.order_id
+    ORDER BY orders.order_id 
     LIMIT 5
 """
 
@@ -32,8 +33,8 @@ query2 = """
     JOIN (
         SELECT orders.order_id, orders.customer_id AS customer_id_b, SUM(products.price*line_items.quantity) AS total_price
         FROM orders 
-        JOIN line_items ON orders.order_id = line_items.order_id 
-        JOIN products ON line_items.product_id = products.product_id
+        LEFT JOIN line_items ON orders.order_id = line_items.order_id 
+        LEFT JOIN products ON line_items.product_id = products.product_id
         GROUP BY orders.order_id
     ) AS order_totals
     ON customers.customer_id = order_totals.customer_id_b
@@ -48,7 +49,7 @@ conn.close()
 #########
 # TASK 3:
 ######### 
-conn = sqlite3.connect("db/lesson.db")
+conn = sqlite3.connect("../db/lesson.db")
 conn.execute("PRAGMA foreign_keys = 1")
 cursor = conn.cursor()
 
