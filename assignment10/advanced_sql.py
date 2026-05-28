@@ -3,7 +3,7 @@ import sqlite3
 #########
 # TASK 1:
 #########
-conn = sqlite3.connect("db/lesson.db")
+conn = sqlite3.connect("../db/lesson.db")
 cursor = conn.cursor()
 
 query = """
@@ -24,11 +24,11 @@ conn.close()
 #########
 # TASK 2:
 #########
-conn = sqlite3.connect("db/lesson.db")
+conn = sqlite3.connect("../db/lesson.db")
 cursor = conn.cursor()
 
 query2 = """
-    SELECT customers.customer_name, AVG(total_price)
+    SELECT customers.customer_name, AVG(total_price) AS average_total_price
     FROM customers
     JOIN (
         SELECT orders.order_id, orders.customer_id AS customer_id_b, SUM(products.price*line_items.quantity) AS total_price
@@ -118,7 +118,7 @@ conn.close()
 #########
 # TASK 4:
 #########
-conn = sqlite3.connect("db/lesson.db")
+conn = sqlite3.connect("../db/lesson.db")
 cursor = conn.cursor()
 
 task_4_query = """
