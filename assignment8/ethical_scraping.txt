@@ -1,0 +1,18 @@
+Task 5:
+
+1.) Which sections of the website are restricted for crawling?
+The main restricted sections are the lines with Disallow: under User-agent: *.  
+The broadest restricted areas are:
+/w/ 
+/api/ 
+/trap/
+/wiki/Special
+
+2.)  Are there specific rules for certain user agents?
+Yes.  Some bots are fully blocked while others have crawl delays.
+
+3.)  Why use robots.txt?
+Allow website owners control over how automated agents interact with their sites.  Prevents overloading server,
+protects sensitive or irrelevant content from being indexed, and sets clear expectations for crawlers.
+By following it, scrapers behave ethically and reduce the risk of legal issues, service disruption, or accessing
+data the site owner has explicitly chosen to keep private.
