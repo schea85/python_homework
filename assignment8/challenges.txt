@@ -1,0 +1,9 @@
+# Task 6 cont'd:
+
+Challenges:
+
+I mostly tried following the CTD's lesson on XPATH and referred to the code for help.
+However, there were some challenges while completing this assignment.  I looked up XPATH documentation, to better
+understand the page structure and resolve issues with locating elements.  Also, I used the browser develop tool to
+ inspect the page structure step by step to find the correct elements.  This helped to identify the correct
+ h3 and related list items containing the top 10 links.
